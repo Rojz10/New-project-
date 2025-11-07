@@ -49,7 +49,10 @@ Just football.
 
 🤝 Community
 
-Football is emotion. Emotion is shared.
+Football is emotion.
+
+Emotion is shared.
+
 Fans can:
 
 Comment on posts.
