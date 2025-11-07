@@ -46,3 +46,13 @@ That one player who made football feel magical.
 This platform is dedicated to that feeling.
 No bias. No hate.
 Just football.
+
+🤝 Community
+
+Football is emotion. Emotion is shared.
+Fans can:
+Comment on posts
+Join weekly debates
+Share opinions respectfully
+Respect every player. Respect every fan.
+No toxicity here.
