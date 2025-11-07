@@ -1,4 +1,6 @@
-#God Of Football 
+# 🐐 God of Football
+**Where Greatness Lives.**
+
 
 Welcome to God of Football, the ultimate home for true football lovers.
 Here, football isn’t just a sport  it’s emotion, passion, and a way of life.
