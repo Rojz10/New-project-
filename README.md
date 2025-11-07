@@ -51,6 +51,7 @@ Just football.
 
 Football is emotion. Emotion is shared.
 Fans can:
+
 Comment on posts.
 
 Join weekly debates.
