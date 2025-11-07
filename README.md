@@ -27,3 +27,13 @@ Honor the legends who shaped the game.
 Highlight the best players and greatest moments.
 Share news, matches, and stories that keep football alive.
 From iconic goals to unforgettable finals — this site is your football memory lane and today’s live excitement.
+
+🌍 What You’ll Find Here
+
+| Section                           | Description                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------- |
+| **Legends Corner**                | Stories, records, and achievements of the greatest players of all time.         |
+| **Player Profiles**               | Stats, biography, awards, and highlights of current stars and emerging talents. |
+| **Match & Tournament Highlights** | Key games, major tournaments, and unforgettable football moments.               |
+| **Football News & Updates**       | Latest updates from leagues, transfers, clubs, and global competitions.         |
+| **Fan Opinions & Polls**          | Debate who truly is the “G.O.A.T.” 🐐                                           |
