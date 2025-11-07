@@ -51,8 +51,12 @@ Just football.
 
 Football is emotion. Emotion is shared.
 Fans can:
-Comment on posts
-Join weekly debates
-Share opinions respectfully
+Comment on posts.
+
+Join weekly debates.
+
+Share opinions respectfully.
+
 Respect every player. Respect every fan.
+
 No toxicity here.
