@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>God of Football — Where Greatness Lives.</title>
+    <meta name="description" content="God of Football — Messi tribute, legends, clean news snapshots, and fan-first football." />
+    <link rel="preconnect" href="https://images.wikimedia.org" />
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --bg-alt: #090d14;
+        --card: rgba(255,255,255,0.04);
+        --card-bd: rgba(255,255,255,0.12);
+        --text: #ffffff;
+        --muted: rgba(255,255,255,0.72);
+        --muted-2: rgba(255,255,255,0.56);
+        --pill: rgba(255,255,255,0.06);
+        --radius: 18px;
+        --shadow: 0 8px 30px rgba(0,0,0,.35);
+        --maxw: 1180px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
+      a { color: inherit; text-decoration: none; }
+      .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 1rem; }
+      .pill { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .75rem; border-radius:999px; background:var(--pill); border:1px solid var(--card-bd); color:var(--muted); font-size:.8rem }
+      .card { background: var(--card); border: 1px solid var(--card-bd); border-radius: var(--radius); padding: 1.1rem; box-shadow: var(--shadow); }
+      .btn { display:inline-block; padding:.85rem 1.15rem; border-radius:14px; font-weight:600; border:1px solid var(--card-bd); background:#fff; color:#000; }
+      .btn.outline { background: transparent; color: var(--text); }
+      .btn:hover { opacity: .92; }
+      .grid { display:grid; gap:1rem }
+      .stats { display:grid; grid-template-columns:repeat(3,1fr); gap: .8rem }
+      .stat { text-align:center; padding:1rem; border-radius:16px; background:var(--pill); border:1px solid var(--card-bd) }
+      .stat .v { font-size:1.7rem; font-weight:800 }
+      .muted { color: var(--muted); }
+      .muted-2 { color: var(--muted-2); }
+      .title { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; margin: .4rem 0; font-weight: 900 }
+      .h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); margin: 0 0 .4rem; font-weight: 800 }
+      .h3 { font-size: 1.1rem; margin:.2rem 0; font-weight:700 }
+      header.nav {
+        position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--card-bd); backdrop-filter: blur(8px);
+      }
+      .nav-wrap { display:flex; align-items:center; justify-content:space-between; padding:.8rem 0 }
+      .brand { display:flex; gap:.7rem; align-items:center }
+      .brand .logo { width:38px; height:38px; display:grid; place-items:center; background:#fff; color:#000; border-radius:12px; font-weight:900; }
+      .brand .name { line-height:1 }
+      .brand .name small { display:block; color:var(--muted-2) }
+      .nav-links { display:flex; gap: .5rem }
+      .nav-links a { padding:.55rem .8rem; border-radius:12px; color:var(--muted); border:1px solid transparent }
+      .nav-links a:hover { background: var(--pill); border-color: var(--card-bd); color: var(--text) }
+      .menu { display:none }
+      @media (max-width: 860px) {
+        .menu { display:block }
+        .nav-links { display:none }
+        .nav-links.open { display:grid; grid-template-columns:1fr; gap:.4rem; padding:.6rem 0 }
+        .stats { grid-template-columns: repeat(3, 1fr) }
+      }
+      .hero {
+        background:
+          radial-gradient(ellipse at top, rgba(88,101,242,.22), transparent 60%),
+          radial-gradient(ellipse at bottom, rgba(16,185,129,.14), transparent 60%);
+        padding: 3.2rem 0 3rem;
+      }
+      .hero-grid { display:grid; gap:1.5rem; grid-template-columns: 1.05fr .95fr }
+      @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr } }
+      .img-wrap { position:relative }
+      .img-frame { aspect-ratio: 4/5; overflow:hidden; border-radius: 24px; border:1px solid var(--card-bd); background: var(--card) }
+      .img-frame img { width:100%; height:100%; object-fit:cover }
+      .corner { position:absolute; left:-10px; bottom:-10px; transform: rotate(-3deg) }
+      section { padding: 3rem 0 }
+      .legend-grid { grid-template-columns: repeat(4, 1fr) }
+      @media (max-width: 1140px) { .legend-grid { grid-template-columns: repeat(3, 1fr) } }
+      @media (max-width: 860px) { .legend-grid { grid-template-columns: repeat(2, 1fr) } }
+      @media (max-width: 560px) { .legend-grid { grid-template-columns: 1fr } }
+      .search { width:100%; padding:.9rem 1rem; border-radius:14px; background:var(--pill); border:1px solid var(--card-bd); color:var(--text) }
+      .tabs { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem }
+      .tab { padding:.55rem 1rem; border-radius:999px; border:1px solid var(--card-bd); background:var(--pill); color:var(--muted) }
+      .tab.active { background:#fff; color:#000; border-color:#fff }
+      footer { background: var(--bg-alt); border-top: 1px solid var(--card-bd); padding: 1.2rem 0 }
+      .footer-wrap { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap }
+      .hidden { display:none !important }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="nav" id="top">
+      <div class="container">
+        <div class="nav-wrap">
+          <a class="brand" href="#top">
+            <div class="logo">GOF</div>
+            <div class="name">
+              <strong>God of Football</strong>
+              <small>Where Greatness Lives.</small>
+            </div>
+          </a>
+          <button class="menu pill" id="menuBtn">Menu</button>
+          <nav class="nav-links" id="navLinks">
+            <a href="#top">Home</a>
+            <a href="#messi">Messi</a>
+            <a href="#legends">Legends</a>
+            <a href="#latest">News</a>
+            <a href="#subscribe">Subscribe</a>
+          </nav>
+        </div>
+        <nav class="nav-links hidden" id="navLinksMobile">
+          <a href="#top">Home</a>
+          <a href="#messi">Messi</a>
+          <a href="#legends">Legends</a>
+          <a href="#latest">News</a>
+          <a href="#subscribe">Subscribe</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill"><span style="width:8px;height:8px;background:#34d399;border-radius:999px;display:inline-block"></span> Live for the game</span>
+          <h1 class="title">God of Football</h1>
+          <p class="muted" style="font-size:1.05rem"> <em>Where Greatness Lives.</em> Dive into Messi’s legacy, era‑defining moments, and the global game — clean, fast, fan‑first.</p>
+          <div style="margin-top: 1rem; display:flex; gap:.6rem; flex-wrap:wrap">
+            <a href="#messi" class="btn">Explore Messi Hall of Fame</a>
+            <a href="#latest" class="btn outline">Latest News</a>
+          </div>
+          <div class="stats" style="margin-top:1.1rem">
+            <div class="stat"><div class="v">50+</div><div class="muted-2">Legends</div></div>
+            <div class="stat"><div class="v">200+</div><div class="muted-2">Articles</div></div>
+            <div class="stat"><div class="v">∞</div><div class="muted-2">Fans</div></div>
+          </div>
+        </div>
+        <div class="img-wrap">
+          <div class="img-frame">
+            <img alt="Lionel Messi" loading="lazy" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/11/14/13/Lionel-Messi-2.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp" />
+          </div>
+          <div class="corner"><span class="pill">🐐 GOAT • Ballon d'Or ×8</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESSI HALL OF FAME -->
+    <section id="messi">
+      <div class="container">
+        <h2 class="h2">Messi Hall of Fame</h2>
+        <p class="muted">A living legacy of records, trophies, and unforgettable moments.</p>
+        <div class="grid" style="grid-template-columns:2fr 1fr; margin-top:1rem">
+          <div class="card">
+            <h3 class="h3">The Story</h3>
+            <p class="muted">
+              From Rosario to Barcelona and the world stage, Messi redefined what’s possible with a ball at his feet. His vision, balance and decision‑making turned the half‑space into a canvas — orchestrating football as art.
+            </p>
+            <div class="grid" style="grid-template-columns: repeat(3,1fr); margin-top:.6rem">
+              <div class="card"><strong>World Cup</strong> — 2022</div>
+              <div class="card"><strong>Ballon d'Or</strong> — ×8</div>
+              <div class="card"><strong>UCL</strong> — ×4</div>
+              <div class="card"><strong>La Liga</strong> — ×10</div>
+              <div class="card"><strong>Copa América</strong> — 2021</div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="h3">Quick Facts</h3>
+            <ul class="muted">
+              <li>Preferred Foot: Left</li>
+              <li>Playstyle: Creator‑Finisher</li>
+              <li>Signature: Dribble, Slip Pass, Curler</li>
+              <li>Trait: Gravity in tight spaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGENDS -->
+    <section id="legends">
+      <div class="container">
+        <h2 class="h2">Legends</h2>
+        <p class="muted">Greatness recognizes greatness — explore icons who shaped eras.</p>
+        <input id="search" class="search" placeholder="Search legends, clubs, countries…" />
+        <div id="legendGrid" class="grid legend-grid" style="margin-top:1rem"></div>
+      </div>
+    </section>
+
+    <!-- LATEST / NEWS -->
+    <section id="latest">
+      <div class="container">
+        <h2 class="h2">Latest</h2>
+        <p class="muted">Clean snapshots of news, analysis and scouting.</p>
+        <div class="tabs" id="newsTabs"></div>
+        <div id="newsWrap" class="grid" style="grid-template-columns: repeat(3,1fr)"></div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section id="subscribe">
+      <div class="container">
+        <h2 class="h2">Join the Squad</h2>
+        <p class="muted">No spam — only the best football stories, weekly.</p>
+        <form id="form" class="card" style="max-width:640px; margin-top: .6rem">
+          <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+            <input required type="email" id="email" placeholder="Your email address" style="flex:1; padding:.9rem 1rem; border-radius:14px; background:var(--bg-alt); border:1px solid var(--card-bd); color:var(--text)" />
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+          <p id="thanks" class="muted hidden" style="margin-top:.8rem">You're in! Check your inbox for a welcome note. ⚽</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-wrap">
+        <div class="muted-2">© <span id="year"></span> God of Football — Where Greatness Lives.</div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap">
+          <a class="muted" href="#">Twitter/X</a>
+          <a class="muted" href="#">Instagram</a>
+          <a class="muted" href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- Data ---
+      const legendsSeed = [
+        {
+          id: 1,
+          name: 'Lionel Messi',
+          role: 'The GOAT',
+          club: 'Inter Miami CF',
+          country: 'Argentina',
+          img:'https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/11/14/13/Lionel-Messi-2.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp',
+          badges: ["Ballon d'Or ×8", 'World Cup 2022', 'UCL ×4'],
+          featured: true,
+        },
+        {
+          id: 2,
+          name: 'Cristiano Ronaldo',
+          role: 'Legend',
+          club: 'Al Nassr',
+          country: 'Portugal',
+          img: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg',
+          badges: ["Ballon d'Or ×5", 'EURO 2016', 'UCL ×5'],
+        },
+        {
+          id: 3,
+          name: 'Pelé',
+          role: 'Icon',
+          club: 'Santos (Legendary)',
+          country: 'Brazil',
+          img: 'https://img.dailymail.co.uk/i/pix/2007/06_02/peleDM2006_468x808.jpgF',
+          badges: ['World Cup ×3', '1,000+ Goals'],
+        },
+        {
+          id: 4,
+          name: 'Diego Maradona',
+          role: 'Icon',
+          club: 'Napoli (Legendary)',
+          country: 'Argentina',
+          img: 'https://cdn.britannica.com/76/124976-050-E03E50CE/Diego-Maradona-1986.jpg',
+          badges: ['World Cup 1986', 'Napoli Legend'],
+        },
+      ];
+
+      const newsSeed = [
+        { id: 'n1', title: 'Matchday Roundup — Weekend Thrillers', tag: 'News', excerpt: "From stoppage-time winners to hat‑tricks, here’s your clean snapshot of the weekend’s biggest football moments." },
+        { id: 'n2', title: 'Tactical Board — Why Messi’s Left Foot Creates Overloads', tag: 'Analysis', excerpt: 'A quick breakdown of half‑spaces, third‑man runs and the gravity Messi creates between the lines.' },
+        { id: 'n3', title: 'Rising Stars to Watch This Season', tag: 'Scouting', excerpt: 'Five U23 talents lighting up Europe with numbers to back the hype.' },
+      ];
+
+      // --- Navbar mobile toggle ---
+      const menuBtn = document.getElementById('menuBtn');
+      const navLinksMobile = document.getElementById('navLinksMobile');
+      menuBtn?.addEventListener('click', () => {
+        navLinksMobile.classList.toggle('hidden');
+      });
+
+      // --- Legends rendering + search ---
+      const legendGrid = document.getElementById('legendGrid');
+      const search = document.getElementById('search');
+
+      function legendCard(p){
+        return `
+          <div class="card">
+            <div style="aspect-ratio:4/5; overflow:hidden; border-radius:14px">
+              <img src="${p.img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:.6rem">
+              <div>
+                <div class="h3" style="margin:0">${p.name}</div>
+                <div class="muted-2" style="font-size:.85rem">${p.role} • ${p.country}</div>
+              </div>
+              ${p.featured ? '<span class="pill">Featured</span>' : ''}
+            </div>
+            <div style="margin-top:.5rem; display:flex; gap:.4rem; flex-wrap:wrap">
+              ${p.badges.map(b=>`<span class="pill">${b}</span>`).join('')}
+            </div>
+          </div>`
+      }
+
+      function renderLegends(list){
+        legendGrid.innerHTML = list.map(legendCard).join('');
+      }
+
+      renderLegends(legendsSeed);
+      search.addEventListener('input', (e)=>{
+        const t = e.target.value.trim().toLowerCase();
+        if(!t) return renderLegends(legendsSeed);
+        const f = legendsSeed.filter(x => [x.name, x.country, x.club, x.role].some(v => v.toLowerCase().includes(t)));
+        renderLegends(f);
+      });
+
+      // --- News tabs + list ---
+      const newsTabs = document.getElementById('newsTabs');
+      const newsWrap = document.getElementById('newsWrap');
+      const tags = ['All', ...Array.from(new Set(newsSeed.map(n=>n.tag)))];
+      let active = 'All';
+
+      function renderTabs(){
+        newsTabs.innerHTML = tags.map(t=>`<button class="tab ${active===t?'active':''}" data-tag="${t}">${t}</button>`).join('');
+      }
+      function renderNews(){
+        const list = active==='All' ? newsSeed : newsSeed.filter(n=>n.tag===active);
+        newsWrap.innerHTML = list.map(n=>`
+          <div class="card">
+            <span class="pill">${n.tag}</span>
+            <div class="h3" style="margin-top:.5rem">${n.title}</div>
+            <p class="muted" style="font-size:.95rem">${n.excerpt}</p>
+            <button class="btn outline" style="margin-top:.6rem">Read more</button>
+          </div>`).join('');
+      }
+      newsTabs.addEventListener('click', (e)=>{
+        const t = e.target.closest('button');
+        if(!t) return;
+        active = t.dataset.tag; renderTabs(); renderNews();
+      });
+      renderTabs(); renderNews();
+
+      // --- Subscribe form ---
+      const form = document.getElementById('form');
+      const email = document.getElementById('email');
+      const thanks = document.getElementById('thanks');
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        if(email.value.includes('@')){
+          thanks.classList.remove('hidden');
+          email.value = '';
+        }
+      });
+
+      // --- Footer year ---
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
