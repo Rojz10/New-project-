@@ -64,3 +64,16 @@ Share opinions respectfully.
 Respect every player. Respect every fan.
 
 No toxicity here.
+
+📬 Contact
+
+For suggestions, content contributions, or collaborations:
+
+Email: adhikariroj7@gmail.com
+Instagram/TikTok: @godoffootball
+
+📄 License
+
+This website is for football fans, made by football fans.
+Content may be used or reshared with proper credit.
+
